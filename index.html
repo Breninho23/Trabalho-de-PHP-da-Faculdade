@@ -1,24 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/cadastro.css">
     <title>Cadastro de Usuario</title>
-   </head>
-   <body>
-       <form action="cadastro.php" method="POST">
-        <label for="">Nome:</label>
-        <input type="text" name="nome">
+</head>
 
-        <label for="">Sobrenome:</label>
-        <input type="text" name="sobrenome">
+<body>
+    <section class="hero is-success is-fullheight" style="background-image: url('css/footer.jpg');">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="column is-4 is-offset-4">
+                    <h3 class="title has-text-grey">Sistema de Cadastro</h3>
+                    <h3 class="title has-text-grey">Breninho Gameplays</h3>
+                    <div class="box">
+                        <form action="cadastro.php" method="POST">
+                           
+                                <label for="">Nome:</label>
+                            
+                            <div class="field">
+                                <input type="text" name="nome" required="true">
+                            </div>
+                          
+                                <label for="">Sobrenome:</label>
+                            
+                            <div class="field">
+                                <input type="text" name="sobrenome" required="true">
+                            </div>
+                            
+                                <label for="">E-mail:</label>
+                            
+                            <div class="field">
+                                <input type="email" name="email" required="true">
+                            </div>
+                            
+                                <label for="">Telefone:</label>                            
+                            <div class="field">
+                                <input pattern="[0-9]{1,9}" maxlength="2" style="width: 34px;" type="dd" name="dd" required="true" placeholder="(DD)">
+                                <input pattern="[0-9]{1,9}" maxlength="9" type="tel" name="telefone" required="true" placeholder="00000-0000">
+                            </div>
+                            <button type="submit"
+                                class="button is-block is-link is-large is-fullwidth">Cadastrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
 
-        <label for="">E-mail:</label>
-        <input type="email" name="email">
-
-        <label for="">Telefone:</label>
-        <input type="tel" name="telefone">
-        <button>Cadastrar</button>
-       </form>
-   </body>
-   </html>
+</html>

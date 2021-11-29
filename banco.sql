@@ -3,5 +3,6 @@ CREATE TABLE login (
   `nome` VARCHAR(200) NOT NULL,
   `sobrenome` VARCHAR(200) NOT NULL,
   `email` VARCHAR(200) NOT NULL,
+  `dd` VARCHAR(200) NOT NULL,
   `telefone` VARCHAR(200) NOT NULL,
   PRIMARY KEY (`id`));
